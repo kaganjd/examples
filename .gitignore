@@ -2,3 +2,5 @@ node_modules
 functions
 .vscode
 dev.js
+# Local Netlify folder
+.netlify

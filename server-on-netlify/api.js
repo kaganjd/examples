@@ -85,7 +85,7 @@ router.get("/waitlist", async (req, res) => {
     var leaderboard = await User.find({}, "email -_id").sort({
       numberOfReferrals: -1
     });
-    var index = (leaderboard.findIndex(item => item.email === user.email)) + 1;
+    var index = leaderboard.findIndex(item => item.email === user.email) + 1;
     var referralUrlsArray = referralUrls.referralUrls(
       req,
       "Ayli - Earn Money Browsing The Internet. Ayli is a marketplace where companies pay for data you create while using the web and enables you to passively earn extra money each month. Use the link to sign up.",
@@ -93,7 +93,19 @@ router.get("/waitlist", async (req, res) => {
       "Hey checkout this new service! Ayli is a marketplace where companies pay for data you create while using the web and enables you to passively earn extra money each month. Use the link to sign up.",
       "Hey checkout this new service! Ayli is a marketplace where companies pay for data you create while using the web and enables you to passively earn extra money each month. Use the link to sign up."
     );
-    res.send(waitlistPage.waitlistPage(referralUrlsArray[0], referralUrlsArray[1], referralUrlsArray[2], referralUrlsArray[3], referralUrlsArray[4], referralUrlsArray[5], user.numberOfReferrals, index, count));
+    res.send(
+      waitlistPage.waitlistPage(
+        referralUrlsArray[0],
+        referralUrlsArray[1],
+        referralUrlsArray[2],
+        referralUrlsArray[3],
+        referralUrlsArray[4],
+        referralUrlsArray[5],
+        user.numberOfReferrals,
+        index,
+        count
+      )
+    );
   }
   if (!req.cookies.referralId) {
     res.redirect("/");
