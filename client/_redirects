@@ -1,1 +1,2 @@
-/waitlist /.netlify/functions/api/waitlist 301
+/withoutexpress /.netlify/functions/withoutexpress 200
+/withexpress /.netlify/functions/withexpress 200

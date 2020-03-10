@@ -1,0 +1,30 @@
+const express = require("express");
+const serverless = require("serverless-http");
+
+const app = express();
+const router = express.Router();
+
+const html = (title, body) => {
+  return `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>${title}</title>
+      </head>
+      <body>
+        <div>
+          <h1>${body}</h1>
+        </div>
+      </body>
+    </html>
+  `;
+};
+
+router.get("/", (req, res) => {
+  res.send(html("The functions title works",
+    "the functions body works"))
+})
+
+app.use("/.netlify/functions/withExpress", router);
+
+module.exports.handler = serverless(app);

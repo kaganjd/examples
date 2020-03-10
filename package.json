@@ -1,32 +1,33 @@
 {
-    "name": "project-neuralete",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "dev": "nodemon server-off-netlify/api.js",
-        "build": "./node_modules/.bin/netlify-lambda build server-on-netlify"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://Bioletic-Technologies:ElonMusk123@github.com/Bioletic-Technologies/project-neuralete.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/Bioletic-Technologies/project-neuralete/issues"
-    },
-    "homepage": "https://github.com/Bioletic-Technologies/project-neuralete#readme",
-    "dependencies": {
-        "body-parser": "^1.19.0",
-        "cookie-parser": "^1.4.4",
-        "express": "^4.17.1",
-        "mongoose": "^5.9.1",
-        "netlify-lambda": "^1.6.3",
-        "path": "^0.12.7",
-        "prettier": "^1.19.1",
-        "serverless-http": "^2.3.1",
-        "shortid": "^2.2.15"
-    }
+  "name": "project-neuralete",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server-off-netlify/api.js",
+    "build": "./node_modules/.bin/netlify-lambda build server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Bioletic-Technologies:ElonMusk123@github.com/Bioletic-Technologies/project-neuralete.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bioletic-Technologies/project-neuralete/issues"
+  },
+  "homepage": "https://github.com/Bioletic-Technologies/project-neuralete#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.1",
+    "netlify-lambda": "^1.6.3",
+    "path": "^0.12.7",
+    "prettier": "^1.19.1",
+    "serverless-http": "^2.3.1",
+    "shortid": "^2.2.15"
+  }
 }
