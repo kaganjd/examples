@@ -20,7 +20,12 @@ exports.handler = async function(event, context) {
       "The functions title works",
       "the functions body works"
     );
-    return { statusCode: 200, body };
+    return { 
+      headers: {
+        "secret": process.env.API_SIGNATURE_TOKEN
+      },
+      statusCode: 200, 
+      body };
   } catch (err) {
     return { statusCode: 500, body: err.toString() };
   }
