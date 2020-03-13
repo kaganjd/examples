@@ -20,7 +20,7 @@ const html = (title, body) => {
   `;
 };
 
-router.get("/", (req, res) => {
+router.get("/withexpress", (req, res) => {
   res.send(html("The functions title works",
     "the functions body works"))
 })
