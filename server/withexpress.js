@@ -25,6 +25,6 @@ router.get("/", (req, res) => {
     "the functions body works"))
 })
 
-app.use("/.netlify/functions/withExpress", router);
+app.use("/", router);
 
 module.exports.handler = serverless(app);
