@@ -1,3 +1,19 @@
 [build]
   publish = "client"
   functions = "functions"
+
+[[redirects]]
+  from = "/withoutexpress"
+  to = "/.netlify/functions/withoutexpress"
+  status = 200
+
+[[redirects]]
+  from = "/withexpress"
+  to = "/.netlify/functions/withexpress"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
