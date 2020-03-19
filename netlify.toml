@@ -2,11 +2,6 @@
   functions = "functions"
 
 [[redirects]]
-  from = "/source_data/*"
-  to = "https://preview.cornerstonenw.com/tcp-tool/source_data/:splat"
-  status = 200
-
-[[redirects]]
   from = "/withoutexpress"
   to = "/.netlify/functions/withoutexpress"
   status = 200
