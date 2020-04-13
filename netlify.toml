@@ -1,6 +1,6 @@
 [build]
   functions = "functions"
-  ignore = "./exit-zero.sh"
+  ignore = "exit 0"
 
 [[redirects]]
   from = "/withoutexpress"
