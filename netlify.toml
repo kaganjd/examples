@@ -1,6 +1,6 @@
 [build]
   functions = "functions"
-  ignore = "git diff --quiet HEAD^ HEAD new-dir/"
+  ignore = "0"
 
 [[redirects]]
   from = "/withoutexpress"
