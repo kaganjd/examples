@@ -1,9 +1,6 @@
 [build]
   functions = "functions"
-  publish = "./"
-  command = "npm run build"
-  base = "./"
-  ignore = "./exit-zero.sh"
+  ignore = "git status"
 
 [[redirects]]
   from = "/withoutexpress"
