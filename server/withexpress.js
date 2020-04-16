@@ -4,7 +4,7 @@ const serverless = require("serverless-http");
 const app = express();
 const router = express.Router();
 
-const html = (title, body) => {
+const html = (title, body, headers) => {
   return `
     <!DOCTYPE html>
     <html>
@@ -14,6 +14,7 @@ const html = (title, body) => {
       <body>
         <div>
           <h1>${body}</h1>
+          <h2>${headers}</h2>
         </div>
       </body>
     </html>
@@ -21,8 +22,12 @@ const html = (title, body) => {
 };
 
 router.get("/withexpress", (req, res) => {
-  res.send(html("The functions title works",
-    "the functions body works"))
+  res.send(
+    html(
+      "The functions title works",
+      "the functions body works",
+      `${res.json(req.headers)}`
+    ))
 })
 
 app.use("/", router);
