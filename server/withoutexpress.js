@@ -8,6 +8,7 @@ const html = (title, body) => {
       <body>
         <div>
           <h1>${body}</h1>
+          <h2>`{response.headers}`</h2>
         </div>
       </body>
     </html>
