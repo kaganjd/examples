@@ -13,6 +13,12 @@
   signed = "API_SIGNATURE_TOKEN"
 
 [[redirects]]
+  from = "/proxy"
+  to = "https://competent-curran-1788d6.netlify.app/"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
