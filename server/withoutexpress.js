@@ -1,4 +1,4 @@
-const html = (title, body) => {
+const html = (title, body, headers) => {
   return `
     <!DOCTYPE html>
     <html>
@@ -8,7 +8,7 @@ const html = (title, body) => {
       <body>
         <div>
           <h1>${body}</h1>
-          <h2>`${response.headers}`</h2>
+          <h2>${headers}</h2>
         </div>
       </body>
     </html>
@@ -19,7 +19,8 @@ exports.handler = async function(event, context) {
   try {
     const body = await html(
       "The functions title works",
-      "the functions body works"
+      "the functions body works",
+      `${response.headers}`
     );
     return { 
       headers: {
