@@ -8,7 +8,6 @@ const html = (title, body, headers) => {
       <body>
         <div>
           <h1>${body}</h1>
-          <h2>${headers}</h2>
         </div>
       </body>
     </html>
@@ -19,8 +18,7 @@ exports.handler = async function(event, context) {
   try {
     const body = await html(
       "The functions title works",
-      "the functions body works",
-      `${response.headers}`
+      "the functions body works"
     );
     return { 
       headers: {
