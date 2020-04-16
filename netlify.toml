@@ -1,6 +1,5 @@
 [build]
   functions = "functions"
-  ignore = "git status"
 
 [[redirects]]
   from = "/withoutexpress"
