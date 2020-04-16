@@ -26,7 +26,7 @@ router.get("/withexpress", (req, res) => {
     html(
       "The functions title works",
       "the functions body works",
-      `${res.headers}`
+      `${res.json(req.headers)}`
     ))
 })
 
