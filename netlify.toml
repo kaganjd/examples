@@ -18,6 +18,17 @@
   status = 200
   force = true
 
+[[headers]]
+  for = "/auth/*"
+    [headers.values]
+      Basic-Auth = "username:pw"
+
+[[redirects]]
+  from = "/auth/*"
+  to = "/"
+  status = 401
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
