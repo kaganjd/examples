@@ -24,12 +24,6 @@
       Basic-Auth = "username:pw"
 
 [[redirects]]
-  from = "/auth/*"
-  to = "/"
-  status = 401
-  force = true
-
-[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
