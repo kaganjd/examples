@@ -1,6 +1,5 @@
 [build]
   functions = "functions"
-  Publish = "Publish"
 
 [[redirects]]
   from = "/withoutexpress"
