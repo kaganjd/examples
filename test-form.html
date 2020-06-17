@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Cheese Check</title>
+    </head>
+    <body>
+        <form name="bad-form" method="POST" netlify>
+            <div class="form-group">
+                <label>Have you ever been evicted, asked to leave, or paid rent late? <code>*</code></label>
+                <br>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="evicted" value="yes" required>Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="evicted" value="no" required> No</label>
+                </div>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </body>
+</html>
