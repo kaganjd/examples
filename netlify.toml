@@ -2,7 +2,7 @@
   functions = "functions"
 
 [context.deploy-preview.environment]
-  SKIP_KEY="test value"
+  SKIP_KEY = "test value"
   [[redirects]]
     from = "/skip-ci"
     to = "/.netlify/functions/skip-ci"
