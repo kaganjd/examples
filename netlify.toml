@@ -1,6 +1,13 @@
 [build]
   functions = "functions"
 
+[context.deploy-preview.environment]
+  SKIP_KEY="test value"
+  [[redirects]]
+    from = "/skip-ci"
+    to = "/.netlify/functions/skip-ci"
+    status = 200
+
 [[redirects]]
   from = "/withoutexpress"
   to = "/.netlify/functions/withoutexpress"
