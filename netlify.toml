@@ -1,8 +1,17 @@
 [build]
   functions = "func"
+  command = "go get ./func/... && go build -o func/parse-media-type ./func/..."
+
+[build.environment]
+  GO_IMPORT_PATH="github.com/kaganjd/redirect-express-functions" 
 
 [context.deploy-preview.environment]
   SKIP_KEY = "test value"
+
+[[headers]]
+  for = "/.netlify/functions/encoding-bug"
+  [headers.values]
+    content-type = "image/png"
   
 [[redirects]]
   from = "/skip-ci"
