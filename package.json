@@ -1,21 +1,16 @@
 {
-  "name": "project-neuralete",
+  "name": "jens-demo-site",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "build": "./node_modules/.bin/netlify-lambda build server"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.9.1",
-    "netlify-lambda": "^1.6.3",
     "path": "^0.12.7",
     "prettier": "^1.19.1",
     "serverless-http": "^2.3.1",

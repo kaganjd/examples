@@ -1,5 +1,5 @@
 [build]
-  functions = "functions"
+  functions = "func"
 
 [context.deploy-preview.environment]
   SKIP_KEY = "test value"
