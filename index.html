@@ -6,15 +6,31 @@
     <title>Barebones</title>
   </head>
   <body>
+    <h2>functions</h2> 
     <ul>
-      <li><a href="/withexpress">Call /withexpress</a></li>
-      <li><a href="/withoutexpress">Call /withoutexpress</a></li>
-      <li><a href="/proxy">Proxy on through</a></li>
-      <li><a href="/radio-buttons">Radio buttons</a></li>
-      <li><a href="/skip-ci">Test [skip ci]</a></li>
-      <li><a href="/.netlify/functions/function-bool-header">Function header: bool instead of string (broken)</a></li>
-      <li><a href="/.netlify/functions/function-str-header">Function header: string (not broken)</a></li>
-      <!-- <li><a href="/.netlify/functions/auth/anon">Call auth</a></li> -->
+      <li><a href="/withexpress">with express</a></li>
+      <li><a href="/withoutexpress">without express</a></li>
+    </ul>
+
+    <h2>proxy</h2>
+    <ul>
+      <li><a href="/proxy">200 rewrite to another site</a></li>
+    </ul>
+
+    <h2>forms</h2>
+    <ul>
+      <li><a href="/radio-buttons">radio buttons and invisible recaptcha v2</a></li>
+    </ul>
+    
+    <h2>deploy contexts</h2>
+    <ul>
+      <li><a href="https://5ef283f8751d440007087f56--nostalgic-payne-051c14.netlify.app/skip-ci">env var: set for deploy preview context</a></li>
+      <li><a href="/.netlify/functions/context-specific">env var: with same context as above, unavailable in production</a></li>
+    </ul>
+
+    <h2>identity</h2>
+    <ul>
+      <li><a href="/gotrue/gotrue-js">vanilla js</a></li>
     </ul>
   </body>
 </html>

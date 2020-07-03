@@ -1,13 +1,14 @@
-const html = (title, body, headers) => {
+const html = (title, body) => {
   return `
     <!DOCTYPE html>
     <html>
       <head>
-        <title>${title}</title>
       </head>
       <body>
         <div>
-          <h1>${body}</h1>
+          <h1>${title}</h1>
+          <h3>${body}</h3>
+          <p>check the headers for the secret token (⊃｡•́‿•̀｡)⊃</p>
         </div>
       </body>
     </html>
@@ -17,8 +18,8 @@ const html = (title, body, headers) => {
 exports.handler = async function(event, context) {
   try {
     const body = await html(
-      "The functions title works",
-      "the functions body works"
+      "render some h1 stuff",
+      "render some h3 stuff"
     );
     return { 
       headers: {

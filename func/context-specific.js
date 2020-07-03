@@ -16,7 +16,7 @@ const html = (body, headers) => {
   exports.handler = async function(event, context) {
     try {
       const body = await html(
-        process.env.SKIP_KEY
+        process.env.DEPLOY_PREVIEW_KEY
       );
       return { 
         statusCode: 200, 
