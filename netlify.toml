@@ -3,7 +3,7 @@
   command = "npx webpack && go get ./func/... && go build -o func/parse-media-type ./func/..."
 
 [build.environment]
-  GO_IMPORT_PATH="github.com/kaganjd/redirect-express-functions" 
+  GO_IMPORT_PATH="github.com/kaganjd/examples" 
 
 [context.deploy-preview.environment]
   DEPLOY_PREVIEW_KEY = "this is only available in context.deploy-preview"
