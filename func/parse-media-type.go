@@ -20,6 +20,10 @@ func splitMediaType(m string) (string, string) {
 	return s[0], s[1]
 }
 
+func equalsOrEndsWith(a, b string) bool {
+	return a == b || strings.HasSuffix(a, "+"+b)
+}
+
 func isBase64(r events.APIGatewayProxyRequest) bool {
 	completeMediaType, _, err := mime.ParseMediaType(r.Headers["content-type"])
 	if err != nil {
@@ -33,9 +37,9 @@ func isBase64(r events.APIGatewayProxyRequest) bool {
 		return false
 	}
 	if mediaType == "application" {
-		return !(subType == "json" || strings.HasSuffix(subType, "+json")) &&
-			!(subType == "xml" || strings.HasSuffix(subType, "+xml")) &&
-			subType != "javascript"
+		return !equalsOrEndsWith(subType, "json") &&
+			!equalsOrEndsWith(subType, "xml") &&
+			!equalsOrEndsWith(subType, "javascript")
 	}
 	return true
 }
