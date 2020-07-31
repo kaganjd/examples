@@ -12,7 +12,27 @@
   for = "/.netlify/functions/encoding-bug"
   [headers.values]
     content-type = "image/png"
-  
+
+[[redirects]]
+  from = "/query-params"
+  to = "https://pronoun.is/"
+  status = 301
+  query = {id = ":id"}
+
+[[redirects]]
+  from = "/forced-redirect"
+  to = "https://pronoun.is/"
+  status = 301
+  force = true
+  query = {id = ":id"}
+
+[[redirects]]
+  from = "/forced-redirect-retain-param"
+  to = "https://pronoun.is/:p"
+  status = 301
+  force = true
+  query = {pronoun = ":p"}
+
 [[redirects]]
   from = "/skip-ci"
   to = "/.netlify/functions/skip-ci"

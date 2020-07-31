@@ -1,0 +1,15 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Query params</title>
+  </head>
+  <body>
+      <div id="params">🔮</div>
+      <script>
+        let params = (new URL(document.location)).searchParams;
+        document.getElementById('params').textContent = params
+    </script>
+  </body>
+</html>

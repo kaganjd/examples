@@ -12,6 +12,13 @@
       <li><a href="/withoutexpress">without express</a></li>
     </ul>
 
+    <h2>redirect</h2>
+    <ul>
+      <li><a href="/query-params?id=123">unforced redirect with query param id=123</a></li>
+      <li><a href="/forced-redirect?id=123">forced redirect with query param id=123 that <strong>does not</strong> retain the query param after the redirect</a></li>
+      <li><a href="/forced-redirect-retain-param?pronoun=they">forced redirect with query param pronoun=they that retains the query param after the redirect</a></li>
+    </ul> 
+
     <h2>proxy</h2>
     <ul>
       <li><a href="/proxy">200 rewrite to another site</a></li>
