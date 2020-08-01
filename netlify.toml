@@ -1,4 +1,4 @@
-﻿[build]
+[build]
   functions = "func"
   command = "npx webpack && go get ./func/... && go build -o func/parse-media-type ./func/..."
 
