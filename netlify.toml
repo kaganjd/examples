@@ -44,7 +44,7 @@
   status = 200
 
 [[redirects]]
-  from = "/withexpress/*"
+  from = "/withexpress"
   to = "/.netlify/functions/withexpress"
   status = 200
   signed = "API_SIGNATURE_TOKEN"

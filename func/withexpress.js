@@ -17,7 +17,7 @@ const html = (headers) => {
   `;
 };
 
-router.get("/withexpress/*", (req, res) => {
+router.get("/withexpress", (req, res) => {
   res.send(
     html(
       `${res.json(req.headers)}`
