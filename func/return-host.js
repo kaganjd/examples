@@ -1,17 +1,18 @@
 exports.handler = async function (event, context) {
-    const generateHtml = (userAgent) => {
+    const generateHtml = (host, userAgent) => {
     return `
         <!DOCTYPE html>
         <html>
         <head>
         </head>
         <body>
+            <p>🚀 host ---> ${host}</p>
             <p>🔎 user-agent ---> ${userAgent}</p>
         </body>
         </html>
     `;
     };
-    const headers = await generateHtml(`${event.headers["user-agent"]}`);
+    const headers = await generateHtml(`${event.headers["host"]}`, `${event.headers["user-agent"]}`);
     try {
         return { 
             statusCode: 200, 
