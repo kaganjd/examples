@@ -1,4 +1,4 @@
-exports.handler = async function (event, context, callback) {
+exports.handler = async function (event, context) {
     const generateHtml = (host, userAgent) => {
     return `
         <!DOCTYPE html>
@@ -13,8 +13,15 @@ exports.handler = async function (event, context, callback) {
     `;
     };
     const headers = await generateHtml(`${event.headers["host"]}`, `${event.headers["user-agent"]}`);
-    callback(null, {
+    try {
+        return { 
             statusCode: 200, 
             body: headers
-    });
+        }
+    } catch (err) {
+        return { 
+            statusCode: 500, 
+            body: err.toString() 
+        }
+    }
 };
