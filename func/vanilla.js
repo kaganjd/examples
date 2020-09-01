@@ -5,7 +5,11 @@ exports.handler = async function(event, context) {
     const j = JSON.stringify(b)
     return { 
       headers: {headerKey: headerKey},
+      // this returns the same thing: 
+      // headers: {headerKey}
       statusCode: s, 
       body: j
+      // this also works:
+      // body: "any old string"
     };
 };
