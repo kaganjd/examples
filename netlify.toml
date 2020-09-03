@@ -14,6 +14,12 @@
     content-type = "image/png"
 
 [[redirects]]
+  from = "/return-host/:p"
+  to = "/.netlify/functions/return-host"
+  status = 200
+  headers = {x-test = "test header"}
+
+[[redirects]]
   from = "/query-params"
   to = "https://pronoun.is/"
   status = 301
