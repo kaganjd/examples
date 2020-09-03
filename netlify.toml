@@ -16,7 +16,7 @@
 [[redirects]]
   from = "/return-host"
   to = "/.netlify/functions/return-host"
-  status = 301
+  status = 200
   headers = {x-test = "test header"}
 
 [[redirects]]
