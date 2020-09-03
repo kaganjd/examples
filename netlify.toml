@@ -14,7 +14,7 @@
     content-type = "image/png"
 
 [[redirects]]
-  from = "/return-host/:p"
+  from = "/return-host"
   to = "/.netlify/functions/return-host"
   status = 200
   headers = {x-test = "test header"}
