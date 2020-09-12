@@ -17,6 +17,7 @@
     "express": "^4.17.1",
     "gotrue-js": "^0.9.26",
     "mongoose": "^5.9.1",
+    "netlify": "^4.3.13",
     "path": "^0.12.7",
     "prettier": "^1.19.1",
     "serverless-http": "^2.3.1",
