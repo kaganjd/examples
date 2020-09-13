@@ -8,28 +8,11 @@ exports.handler = async function (event, context) {
     })
     .catch((e) => console.log('Error getting submissions', e))
 
-  // async function asyncForEach(array, callback) {
-  //   for (let index = 0; index < array.length; index++) {
-  //     await callback(array[index], index, array);
-  //   }
-  // }
-
-  // const start = async () => {
-  //   console.log('inside Start')
-  //   await asyncForEach(submissions, async (submission) => {
-  //     console.log(submission.id)
-  //     await client.deleteSubmission({ submission_id: submission.id })
-  //     console.log('DELETED:', submission.id)
-  //   })
-  //   console.log('Finished deleting')
-  // }
-
   if (submissions.length) {
-    // start()
     for (i = 0; i < submissions.length; i++) {
-      console.log('starting to delete submission', submissions[i].id)
+      console.log('starting to delete submission: ', submissions[i].id)
       await client.deleteSubmission({ submission_id: submissions[i].id })
-      console.log('deleted submission', submissions[i].id)
+      console.log('deleted submission: ', submissions[i].id)
     }
   } else {
     console.log('NOTHING TO DELETE')
