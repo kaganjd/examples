@@ -14,6 +14,12 @@
     content-type = "image/png"
 
 [[redirects]]
+  from = "/my-name/*"
+  to = "/my-name"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/return-path/*"
   to = "/.netlify/functions/return-path/:splat"
   status = 200
