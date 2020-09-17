@@ -8,12 +8,6 @@
 [context.deploy-preview.environment]
   DEPLOY_PREVIEW_KEY = "this is only available in context.deploy-preview"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    content-type = "image/png"
-    x-test = "hello!"
-
 [[redirects]]
   from = "/my-name/*"
   to = "/my-name"
