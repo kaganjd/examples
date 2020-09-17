@@ -13,7 +13,6 @@
   to = "/my-name"
   status = 200
   force = true
-  headers = {x-test = "test header"}
 
 [[redirects]]
   from = "/return-path/*"
