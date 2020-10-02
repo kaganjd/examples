@@ -2,13 +2,6 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        <script>
-            function onSubmit(token) {
-              document.getElementsByName("cheese-check")[0].submit();
-            }
-          </script>
-     
         <meta charset="utf-8"/>
         <title>Cheese Check</title>
     </head>
@@ -21,7 +14,8 @@
             <label>
                 <input type="radio" name="cheese" value="hell yes" required> Hell yes
             </label>
-            <button class="g-recaptcha" data-sitekey="6Lc7N6wZAAAAACePn2D8o8Ii02vl1moWXvUoGPNy" data-callback="onSubmit">Send</button>
+            <div data-netlify-recaptcha="true"></div>
+            <button type="submit">Send</button>
         </form>
     </body>
 </html>
