@@ -1,0 +1,14 @@
+{
+  "name": "firebase-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "init.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL-1.0-only",
+  "dependencies": {
+    "firebase-admin": "^9.2.0"
+  }
+}
