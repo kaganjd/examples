@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ye olde form</title>
+  </head>
+  <body>
+    <h2>ye olde form</h2>
+    <form method="post" netlify-honeypot="bot-field" name="ye olde form" id="yeOldeForm" data-netlify="true">
+      <p>
+        <label>Don’t fill this out if you're human:</label>
+        <input name="bot-field">
+      </p>
+      <p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+      </p>
+      <p>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+      </p>
+      <p>
+        <label for="comments">Comments:</label><br/>
+        <textarea name="comments" id="comments"></textarea>
+      </p>
+      <p>
+        <button type="submit">Submit</button>
+      </p>
+    </form>
+  </body>
+  <script>
+    const handleSubmit = (e) => {
+      e.preventDefault()
+      let myForm = document.getElementById('yeOldeForm');
+      let formData = new FormData(myForm)
+      fetch('/', {
+    	method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    	body: new URLSearchParams(formData).toString()
+      })
+    	.then(() => alert('success!'))
+    	.catch((error) => alert(error))
+    }
+
+    document.querySelector("form").addEventListener("submit", handleSubmit);
+  </script>
+</html>
