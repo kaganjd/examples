@@ -7,8 +7,7 @@
             function onSubmit(token) {
               document.getElementsByName("cheese-check")[0].submit();
             }
-          </script>
-     
+        </script>
         <meta charset="utf-8"/>
         <title>Cheese Check</title>
     </head>
@@ -21,7 +20,7 @@
             <label>
                 <input type="radio" name="cheese" value="hell yes" required> Hell yes
             </label>
-            <button class="g-recaptcha" data-sitekey="6Lc7N6wZAAAAACePn2D8o8Ii02vl1moWXvUoGPNy" data-callback="onSubmit">Send</button>
+            <button class="g-recaptcha" data-callback="onSubmit">Send</button>
         </form>
     </body>
 </html>
