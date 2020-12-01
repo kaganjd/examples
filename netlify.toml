@@ -18,7 +18,7 @@
   force = true
 
 [[redirects]]
-  from = "/spécial-chars"
+  from = "/sp%C3%A9cial-chars"
   to = "https://nas.sr/%D9%82%D9%84%D8%A8/"
   status = 301
   force = true
