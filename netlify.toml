@@ -18,6 +18,18 @@
   force = true
 
 [[redirects]]
+  from = "/spécial-chars"
+  to = "https://nas.sr/%D9%82%D9%84%D8%A8/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/boop"
+  to = "/spécial-chars"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/return-path/*"
   to = "/.netlify/functions/return-path/:splat"
   status = 200
