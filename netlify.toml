@@ -18,8 +18,8 @@
   force = true
 
 [[redirects]]
-  from = "/sp%C3%A9cial-chars"
-  to = "https://nas.sr/%D9%82%D9%84%D8%A8/"
+  from = "/special-chars/*"
+  to = "/:splat"
   status = 301
   force = true
 
