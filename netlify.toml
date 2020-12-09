@@ -18,18 +18,6 @@
   force = true
 
 [[redirects]]
-  from = "/special-chars/*"
-  to = "/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/boop"
-  to = "/spécial-chars"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/return-path/*"
   to = "/.netlify/functions/return-path/:splat"
   status = 200
