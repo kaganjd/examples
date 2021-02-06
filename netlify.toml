@@ -18,12 +18,6 @@
   package = "@netlify/plugin-local-install-core"
 
 [[redirects]]
-  from = "/my-name/*"
-  to = "/my-name"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "/return-path/*"
   to = "/.netlify/functions/return-path/:splat"
   status = 200
@@ -32,26 +26,6 @@
   from = "/return-host"
   to = "/.netlify/functions/return-host"
   status = 200
-
-[[redirects]]
-  from = "/query-params"
-  to = "https://pronoun.is/"
-  status = 301
-  query = {id = ":id"}
-
-[[redirects]]
-  from = "/forced-redirect"
-  to = "https://pronoun.is/"
-  status = 301
-  force = true
-  query = {id = ":id"}
-
-[[redirects]]
-  from = "/forced-redirect-retain-param"
-  to = "https://pronoun.is/:p"
-  status = 301
-  force = true
-  query = {pronoun = ":p"}
 
 [[redirects]]
   from = "/skip-ci"
