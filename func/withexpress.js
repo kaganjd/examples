@@ -18,11 +18,8 @@ const html = (headers) => {
 };
 
 router.get("/withexpress", (req, res) => {
-  res.send(
-    html(
-      `${res.json(req.headers)}`
-    ))
-})
+  res.send(html(`${res.json(req.headers)}`));
+});
 
 app.use("/", router);
 

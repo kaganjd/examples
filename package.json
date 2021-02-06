@@ -1,32 +1,36 @@
 {
-    "name": "jens-demo-site",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "keywords": [],
-    "author": "",
-    "scripts": {
-      "build": "webpack",
-      "start:dev": "webpack-dev-server"
-    },
-    "dependencies": {
-      "body-parser": "^1.19.0",
-      "buffer": "^5.6.0",
-      "cookie-parser": "^1.4.4",
-      "cors": "^2.8.5",
-      "express": "^4.17.1",
-      "gotrue-js": "^0.9.26",
-      "mongoose": "^5.9.1",
-      "netlify": "^4.3.13",
-      "path": "^0.12.7",
-      "prettier": "^1.19.1",
-      "serverless-http": "^2.3.1",
-      "shortid": "^2.2.15",
-      "webpack": "^4.43.0"
-    },
-    "devDependencies": {
-      "webpack-cli": "^3.3.12",
-      "webpack-dev-server": "^3.11.0"
-    }
+  "name": "jens-demo-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "scripts": {
+    "plugin:test": "npm run plugin:lint && npm run ava",
+    "plugin:lint": "npm run eslint && npm run prettier",
+    "eslint": "eslint --ignore-path .gitignore --fix --cache --format=codeframe --max-warnings=0 \"{plugins,func}/**/*.js\"",
+    "prettier": "prettier --ignore-path .gitignore --write --loglevel warn \"{plugins,func}/**/*.{js,md,yml,json}\" \"*.{js,md,yml,json}\"",
+    "ava": "ava --verbose"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "gotrue-js": "^0.9.26",
+    "netlify": "^6.0.0",
+    "path": "^0.12.7",
+    "serverless-http": "^2.3.1",
+    "webpack": "^4.43.0"
+  },
+  "devDependencies": {
+    "@netlify/build": "^9.0.0",
+    "ava": "^3.13.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "execa": "^4.0.3",
+    "prettier": "^2.1.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
-  
+}

@@ -15,18 +15,16 @@ const html = (title, body) => {
   `;
 };
 
-exports.handler = async function(event, context) {
+exports.handler = async function () {
   try {
-    const body = await html(
-      "render some h1 stuff",
-      "render some h3 stuff"
-    );
-    return { 
+    const body = await html("render some h1 stuff", "render some h3 stuff");
+    return {
       headers: {
-        "secret": process.env.API_SIGNATURE_TOKEN
+        secret: process.env.API_SIGNATURE_TOKEN,
       },
-      statusCode: 200, 
-      body };
+      statusCode: 200,
+      body,
+    };
   } catch (err) {
     return { statusCode: 500, body: err.toString() };
   }

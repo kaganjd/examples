@@ -14,13 +14,13 @@ const html = (p, s) => {
   `;
 };
 
-exports.handler = async function(event, context) {
-    const pathParts = event.path.split('/')
-    console.log(pathParts)
-    const splatWithDirectFunctionCall = pathParts[4]
-    const splatFromRedirect = pathParts[2]
-    return {
-      statusCode: 200,
-      body: await html(splatWithDirectFunctionCall, splatFromRedirect)
-    };
+exports.handler = async function (event) {
+  const pathParts = event.path.split("/");
+  console.log(pathParts);
+  const splatWithDirectFunctionCall = pathParts[4];
+  const splatFromRedirect = pathParts[2];
+  return {
+    statusCode: 200,
+    body: await html(splatWithDirectFunctionCall, splatFromRedirect),
+  };
 };
