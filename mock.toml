@@ -1,0 +1,13 @@
+[build]
+  command = "cd ../../func/"
+
+[build.environment]
+  BRANCH = "master"
+  SITE_ID =  "1b2665fe-2d11-4b1f-b6e1-6e8b3a07faac"
+  SITE_NAME = "elastic-lalande-888212"
+
+[[plugins]]
+  package = "/plugins/what-happened"
+
+[[plugins]]
+  package = "@netlify/plugin-local-install-core"

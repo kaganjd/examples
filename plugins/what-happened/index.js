@@ -4,7 +4,7 @@ const NetlifyAPI = require("netlify");
 
 /* eslint-disable no-unused-vars */
 module.exports = {
-  onError: async ({ netlifyConfig, error, utils }) => {
+  onError: async ({ error, utils }) => {
     const gUtil = utils.git;
     const currCommit = gUtil.commits[0];
     const prevCommit = gUtil.commits[1];
@@ -15,24 +15,30 @@ module.exports = {
 
     for (const fileType of fileTypes) {
       if (fileType.deleted.length !== 0) {
-        console.log(`Files deleted: ${fileType.deleted}`);
+        logEach("deleted", fileType.deleted);
       }
       if (fileType.created.length !== 0) {
-        console.log(`Files created: ${fileType.created}`);
+        logEach("created", fileType.created);
       }
     }
-    console.log(`Files modified: ${gUtil.modifiedFiles}`);
+    logEach("modified", gUtil.modifiedFiles);
 
-    const configEnv = netlifyConfig.build.environment;
-    const branch = configEnv.BRANCH;
-    const siteId = configEnv.SITE_ID;
-    const token = configEnv.NETLIFY_PAT;
-    const siteName = configEnv.SITE_NAME;
+    function logEach(updateType, filesArray) {
+      console.log(`Files ${updateType}:`);
+      for (f of filesArray) {
+        console.log(`- ${f}`);
+      }
+    }
+
+    const branch = process.env.BRANCH;
+    const siteId = process.env.SITE_ID;
+    const token = process.env.NETLIFY_AUTH_TOKEN;
+    const siteName = process.env.SITE_NAME;
     let linkToLogsMostRecentSuccessfulDeploy = "";
 
     const client = new NetlifyAPI(token);
     const response = await client
-      .listSiteDeploys({ siteId: siteId })
+      .listSiteDeploys({ site_id: siteId })
       .then((deploys) => {
         for (const d of deploys) {
           if (d.branch == branch && d.published_at) {

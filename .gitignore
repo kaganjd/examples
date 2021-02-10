@@ -3,5 +3,5 @@ functions
 .vscode
 dev.js
 .DS_Store
-# Local Netlify folder
 .netlify
+.eslintcache
