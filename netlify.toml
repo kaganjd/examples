@@ -1,6 +1,6 @@
 [build]
   functions = "func"
-  command = "npx webpack && cd func/firebase/ && npm install && cd ../../ && cd func/send-down-pdf/ && npm install"
+  command = "which cue && npx webpack && cd func/firebase/ && npm install && cd ../../ && cd func/send-down-pdf/ && npm install"
 
 [build.environment]
   GO_IMPORT_PATH="github.com/kaganjd/examples" 
