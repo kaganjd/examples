@@ -48,3 +48,9 @@
   to = "https://competent-curran-1788d6.netlify.app/"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/next-slugs/*"
+  to = "/.netlify/functions/return-path/:splat"
+  status = 200
+  force = false 
