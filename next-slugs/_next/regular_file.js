@@ -1,0 +1,1 @@
+console.log('inside regular_file.js')
