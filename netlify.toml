@@ -54,14 +54,3 @@
   to = "/.netlify/functions/return-path/:splat"
   status = 200
   force = false 
-
-[[headers]]
-  for = "/trailing-slash"
-  [headers.values]
-    Location = "https://google.com"
-
-[[redirects]]
-  from = "/trailing-slash"
-  to = "https://github.com"
-  status = 200
-  force = true 
