@@ -54,3 +54,9 @@
   to = "/.netlify/functions/return-path/:splat"
   status = 200
   force = false 
+
+[[redirects]]
+  from = "/Redirect"
+  to = "https://google.com"
+  status = 301
+  force = true
