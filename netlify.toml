@@ -35,14 +35,14 @@
 [[redirects]]
   from = "/withoutexpress"
   to = "/.netlify/functions/withoutexpress"
-  status = 200
+  status = 301
+  force = true
+  signed = "API_SIGNATURE_TOKEN"
 
 [[redirects]]
   from = "/withexpress"
   to = "/.netlify/functions/withexpress"
   status = 200
-  force = true
-  signed = "API_SIGNATURE_TOKEN"
 
 [[redirects]]
   from = "/proxy"
