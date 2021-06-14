@@ -11,11 +11,11 @@
 [context.deploy-preview.environment]
   DEPLOY_PREVIEW_KEY = "this is only available in context.deploy-preview"
 
-[[plugins]]
-  package = "/plugins/what-happened"
+# [[plugins]]
+#  package = "/plugins/what-happened"
 
-[[plugins]]
-  package = "@netlify/plugin-local-install-core"
+#[[plugins]]
+#  package = "@netlify/plugin-local-install-core"
 
 [[redirects]]
   from = "/return-path/*"
@@ -41,6 +41,7 @@
   from = "/withexpress"
   to = "/.netlify/functions/withexpress"
   status = 200
+  force = true
   signed = "API_SIGNATURE_TOKEN"
 
 [[redirects]]

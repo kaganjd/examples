@@ -15,7 +15,8 @@ const html = (title, body) => {
   `;
 };
 
-exports.handler = async function () {
+exports.handler = async function (event) {
+  console.log(event)
   try {
     const body = await html("render some h1 stuff", "render some h3 stuff");
     return {
