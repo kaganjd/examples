@@ -4,6 +4,9 @@ const NetlifyAPI = require("netlify");
 
 /* eslint-disable no-unused-vars */
 module.exports = {
+  onPreBuild: async ({ error, utils }) => {
+    console.log(process.env.PLUGIN_VAR_TEST)
+  },
   onError: async ({ error, utils }) => {
     const gUtil = utils.git;
     const currCommit = gUtil.commits[0];
