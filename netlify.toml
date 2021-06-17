@@ -34,10 +34,9 @@
 
 [[redirects]]
   from = "/withoutexpress"
-  to = "https://enh8xpuxcrwfc7n.m.pipedream.net"
+  to = "/.netlify/functions/withoutexpress"
   status = 200
   force = true
-  signed = "API_SIGNATURE_TOKEN"
 
 [[redirects]]
   from = "/withexpress"
