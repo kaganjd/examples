@@ -4,7 +4,7 @@ const NetlifyAPI = require("netlify");
 
 /* eslint-disable no-unused-vars */
 module.exports = {
-  onPreBuild: async ({ netlifyConfig }) => {
+  onBuild: async ({}) => {
     console.log(process.env.PLUGIN_VAR_TEST)
   },
   onError: async ({ error, utils }) => {

@@ -4,6 +4,7 @@
 
 [build.environment]
   GO_IMPORT_PATH="github.com/kaganjd/examples" 
+  PLUGIN_VAR_TEST="this is the value of PLUGIN_VAR_TEST"
 
 [dev]
   functions = "dev-func"
