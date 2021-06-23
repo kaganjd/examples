@@ -51,12 +51,6 @@ package = "@netlify/plugin-local-install-core"
   force = true
 
 [[redirects]]
-  from = "/next-slugs/*"
-  to = "/.netlify/functions/return-path/:splat"
-  status = 200
-  force = false 
-
-[[redirects]]
   from = "/Redirect"
   to = "https://google.com"
   status = 301
