@@ -1,7 +1,8 @@
 [build]
   functions = "func"
   command = "npx webpack && cd func/firebase/ && npm install && cd ../../ && cd func/send-down-pdf/ && npm install"
-
+  CONTEXT = "branch-deploy"
+  
 [build.environment]
   GO_IMPORT_PATH="github.com/kaganjd/examples" 
   PLUGIN_VAR_TEST="this is the value of PLUGIN_VAR_TEST"
