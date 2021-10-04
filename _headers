@@ -1,2 +1,4 @@
+/*
+    Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 /header-file
     x-special: 'hello'
