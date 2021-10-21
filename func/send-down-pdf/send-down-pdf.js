@@ -6,7 +6,12 @@ exports.handler = async function () {
   const pathToPDF = path.resolve(__dirname + "/rfc2468.pdf");
   console.log(fs.existsSync(pathToPDF));
   const pdf = fs.readFileSync(pathToPDF);
-
+  const used = process.memoryUsage();
+  for (let key in used) {
+    console.log(
+      `${key} ${Math.round((used[key] / 1024 / 1024) * 100) / 100} MB`
+    );
+  }
   try {
     return {
       statusCode: 200,
