@@ -13,7 +13,7 @@
     "ava": "ava --verbose"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "gotrue-js": "^0.9.26",
     "netlify": "^6.0.0",
     "path": "^0.12.7",
