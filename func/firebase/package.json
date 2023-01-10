@@ -9,6 +9,6 @@
   "author": "",
   "license": "GPL-1.0-only",
   "dependencies": {
-    "firebase-admin": "^9.2.0"
+    "firebase-admin": "^11.4.1"
   }
 }
